@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="10.6.26.7.MediSannaDevs.sa1 2"
+  DTS:DTSID="{24CB84CF-4FB4-4072-BA33-3F26325623DE}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=10.6.26.7;User ID=sa;Initial Catalog=MediSannaDevs;Provider=SQLNCLI11.1;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

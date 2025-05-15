@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="10.6.26.7.MediSannaDevs.sa"
+  DTS:DTSID="{3D19758D-8623-4977-967E-0F8D361D93AD}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=10.6.26.7;User ID=sa;Initial Catalog=MediSannaDevs;Application Name=SSIS-USUARIO-{3D19758D-8623-4977-967E-0F8D361D93AD}10.6.26.7.MediSannaDevs.sa;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAABB+VN9gtPku/eKYWfrOqvgAAAAACAAAAAAADZgAAwAAAABAAAADuqrIjcIdXABw0jchKkd9pAAAAAASAAACgAAAAEAAAAN1kT9/RTu1MVcdBf3n6mNKAAAAA/bhWgu4T6CUw/slN0yh41EOX4/2JRqytlHlFPIUjsEsaLrhXB5ENwBPw7sGRfoODy51ZE9RPdk73obUvZp9r8DpntgenIoqrMNBJTutV5k1s06BoE0g1J5L9xgL5T6bdw2eNHoMfdxFph095HGsnwiGabufTauIhFj4OOqLdOi0UAAAAH5/SbKsURkFveWSQ8gGoXTKnsJM=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

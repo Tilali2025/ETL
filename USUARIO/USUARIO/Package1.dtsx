@@ -1,0 +1,979 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/27/2025 6:45:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DR-5CD2107GJ0"
+  DTS:CreatorName="DOCTORMAS\wvilca"
+  DTS:DTSID="{1B573E1E-7E58-4A1D-9AE3-EAEEAE922E5F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
+  DTS:LocaleID="10250"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{DF77C374-F2AD-48D3-81CF-EBEF40E0A2A0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{BC7A1BFD-12ED-4447-BBDF-B0AF21AE8D7F}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{F646F27D-B711-4210-8F94-634C738E9E69}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task\ODBC Source"
+                  componentClassID="Attunity.SSISODBCSrc"
+                  contactInfo="ODBC Source;Connector for Open Database Connectivity (ODBC) by Attunity; Attunity Ltd.; All Rights Reserved; http://www.attunity.com;2"
+                  description="ODBC Source"
+                  name="ODBC Source"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of the table to be fetched."
+                      expressionType="Notify"
+                      name="TableName"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand">SELECT 
+	COD_USU,NOM_USU 
+FROM M_USUARIOS 
+WHERE ACTIVO = 'T' AND LENGTH(DOC_IDENTIDAD) &gt; 0 
+AND DOC_IDENTIDAD IN
+(
+'71528818',
+'46977309',
+'70059295',
+'75697974',
+'40599332',
+'70443951',
+'71461691',
+'74997041',
+'46995303',
+'46028895',
+'10620500',
+'70033415',
+'47404436',
+'46704268',
+'40532043',
+'46501412',
+'74996911',
+'75825039',
+'73951034',
+'72966130',
+'73262134',
+'10526657',
+'74742639',
+'70863121',
+'73180373',
+'47045128',
+'75852598',
+'74865979',
+'74711706',
+'60722672',
+'72224142',
+'76958214',
+'75385513',
+'42143624',
+'76569028',
+'72632488',
+'76321415',
+'70566962',
+'70230273',
+'70401395',
+'71259882',
+'70997056',
+'70862538',
+'75327428',
+'09881347',
+'74834328',
+'75346642',
+'77274092',
+'46083870',
+'48805823',
+'76217577',
+'72794069',
+'74636877',
+'49007137',
+'42306965',
+'48482169',
+'74779255',
+'70997479',
+'72771753',
+'70432890',
+'70677369',
+'77232432',
+'76772644',
+'45829817',
+'09487407',
+'46509103',
+'73019976',
+'41210796',
+'75743277',
+'10004023',
+'46802023',
+'72016850',
+'71576805',
+'71625142',
+'72194363',
+'76653070',
+'10699655',
+'72749106',
+'70338263',
+'73179242',
+'10327721',
+'77462508',
+'73743393',
+'44818222',
+'76334782',
+'72837491',
+'42902870',
+'73410377',
+'75994159',
+'75331187',
+'76030287',
+'72647004',
+'72569034',
+'46190353',
+'46745446',
+'72764451',
+'70512246',
+'76881720',
+'72194564',
+'74175354',
+'70067136',
+'47442832',
+'99999999',
+'73040990',
+'73422796',
+'09380012',
+'46937843',
+'76545830',
+'40861293',
+'75361714',
+'72126419',
+'70613525',
+'76246262',
+'42850044',
+'10812391',
+'73895195',
+'76346256',
+'44195030',
+'72758442',
+'72677699',
+'73050939',
+'42269161',
+'75381537',
+'41034123',
+'72972579',
+'40150599',
+'72446209',
+'74651813',
+'44565049',
+'09856195',
+'74044588',
+'75166531',
+'45493171',
+'47016477C',
+'72670955E',
+'001283196',
+'46314703',
+'99999999',
+'48261807',
+'46128463',
+'71494517',
+'46059422',
+'47008244',
+'08512412',
+'44881032',
+'46802023',
+'74996790',
+'07634982',
+'44793838',
+'70462265',
+'43909871',
+'41360350',
+'44330323',
+'48539624',
+'70003580',
+'46579073',
+'73253675',
+'74732958',
+'70969461',
+'73455313',
+'72208375',
+'72808136',
+'73101391',
+'44292283',
+'73462166',
+'72126365',
+'70795859',
+'71255090',
+'47603465',
+'07210278',
+'71056595',
+'43130818',
+'47468115',
+'73873133',
+'74833576',
+'44503098',
+'73172766',
+'47844919',
+'45763531',
+'47566540',
+'6160606"',
+'72733257',
+'74994295',
+'43857034',
+'41823120',
+'41403358',
+'70866829',
+'41256553',
+'72755757',
+'70281019',
+'72021149',
+'47452098',
+'75236037',
+'76360277',
+'74498477',
+'44012667',
+'44037528',
+'46709416',
+'71730059',
+'73258251',
+'46432198',
+'07879666',
+'43143321',
+'72010894',
+'44604313',
+'60895375',
+'72542463',
+'72694925',
+'74503739',
+'72530315',
+'71961972',
+'42020284',
+'09859068',
+'76675772',
+'25845396',
+'40944433',
+'48080654',
+'47174854',
+'70438475',
+'71452146',
+'74167771',
+'44891355',
+'43619994',
+'72429889',
+'70004872',
+'44016955',
+'76229794',
+'45616121',
+'70230285',
+'46185954',
+'74884721',
+'40237767',
+'73471326',
+'40090222',
+'71020482',
+'70827182',
+'46759089',
+'45908593M',
+'72220935',
+'07627528',
+'48098377',
+'45055474',
+'09561160',
+'05642091',
+'47184540',
+'46062910',
+'42788539',
+'77210467',
+'47559371',
+'73095326',
+'41928640',
+'48179621',
+'72045229',
+'73049343',
+'76362012',
+'41317667',
+'41049274',
+'74755017',
+'73672158',
+'47453811',
+'70259118',
+'74871757',
+'75747474',
+'99999999',
+'76383386',
+'42124246',
+'70339456',
+'48667428',
+'77298393',
+'70171870',
+'43345623',
+'07820687',
+'72529030',
+'74053030',
+'10735274',
+'10811812',
+'70438487',
+'73061752',
+'10805781',
+'70886663',
+'76189302',
+'47288407',
+'74200859',
+'73093772',
+'70097852',
+'48575133',
+'76565598',
+'72901131',
+'99999999',
+'76515789',
+'44779948',
+'99999999',
+'99999999',
+'70171870',
+'99999999',
+'99999999',
+'71966702',
+'76230725',
+'71254131',
+'48839185',
+'41132760',
+'72865677',
+'43965041',
+'70372523',
+'45531297',
+'75448127',
+'74083399',
+'10267720',
+'47007567',
+'70608470',
+'71962134',
+'08761905M',
+'73644766',
+'72733257',
+'70684156',
+'08844670',
+'41801286',
+'76383509',
+'10558897',
+'70500546',
+'76206592',
+'44746560',
+'73528831',
+'46770512',
+'40505859',
+'73010193',
+'74802899',
+'40493873',
+'74997041',
+'07913475',
+'10139736',
+'43437766',
+'11',
+'70025865',
+'43256017',
+'43998458',
+'73343735',
+'73343735',
+'74698109',
+'09670540',
+'72045229',
+'47149219',
+'43333540',
+'70543753',
+'73254250',
+'45324795',
+'75056857',
+'46799951',
+'47455134',
+'06792391',
+'10547345',
+'41897021',
+'10661145',
+'07802313',
+'45948531',
+'42488343',
+'06288852',
+'06437080',
+'10558897',
+'40574672',
+'70336049',
+'16739817',
+'43389946',
+'41941986',
+'72701540',
+'002025798J',
+'74688473',
+'76565598',
+'73502076',
+'44198634',
+'43115066',
+'45082678',
+'10386259',
+'47399781',
+'47751863',
+'72325547',
+'71307574',
+'46371433',
+'42416449',
+'73143434',
+'46000017',
+'73520969',
+'71223234',
+'42733892',
+'43437766',
+'45082678',
+'10689981',
+'40879369',
+'73343735',
+'60046793',
+'07977452',
+'72274516',
+'43150616',
+'09670646',
+'75406968',
+'70860101',
+'47801959',
+'70229698',
+'41744239',
+'44330851',
+'41374636',
+'74185297',
+'41671007',
+'70243314',
+'76014222',
+'99999999',
+'99999999',
+'47498589',
+'42623793',
+'09832878',
+'72200731',
+'47325038',
+'76132870',
+'71418212',
+'47386145',
+'99999999',
+'08875955',
+'72851913',
+'72579881',
+'40970596',
+'40558640',
+'71852771',
+'75550441',
+'42989716',
+'43869822',
+'44851886',
+'09712245',
+'44259814',
+'70030301',
+'47945963',
+'70997790',
+'72648085',
+'70257557',
+'43680250'
+)
+AND DOC_IDENTIDAD NOT IN('99999999')
+ORDER BY DOC_IDENTIDAD ASC</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows fetched per batch."
+                      expressionType="Notify"
+                      name="BatchSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                      expressionType="Notify"
+                      name="ExposeCharColumnsAsUnicode">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for fetching data."
+                      expressionType="Notify"
+                      name="FetchMethod"
+                      typeConverter="FetchMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs"
+                      typeConverter="BindNumericAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs"
+                      typeConverter="BindCharColumnsAs">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Data Flow Task\ODBC Source.Connections[ODBCConnection]"
+                      connectionManagerID="{7B1DD1B0-015B-4E35-8113-CAF73DE7D38F}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[PostgreSQL]"
+                      description="The ODBC runtime connection"
+                      name="ODBCConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output]"
+                      errorRowDisposition="FailComponent"
+                      name="ODBC Source Output"
+                      truncationRowDisposition="FailComponent">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[cod_usu]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[cod_usu]"
+                          length="12"
+                          lineageId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[cod_usu]"
+                          name="cod_usu" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[nom_usu]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[nom_usu]"
+                          length="30"
+                          lineageId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[nom_usu]"
+                          name="nom_usu" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[cod_usu]"
+                          codePage="1252"
+                          dataType="str"
+                          length="12"
+                          name="cod_usu" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[nom_usu]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="nom_usu" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Error Output]"
+                      isErrorOut="true"
+                      name="ODBC Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Error Output].Columns[cod_usu]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[cod_usu]"
+                          length="12"
+                          lineageId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Error Output].Columns[cod_usu]"
+                          name="cod_usu" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Error Output].Columns[nom_usu]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[nom_usu]"
+                          length="30"
+                          lineageId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Error Output].Columns[nom_usu]"
+                          name="nom_usu" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task\OLE DB Command"
+                  componentClassID="Microsoft.OLEDBCommand"
+                  contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+                  name="OLE DB Command"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE TBLMDS_USUARIO
+SET SUSR_PK_POSTGRES = ?
+WHERE SUSR_NOMBRE = ?
+</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Command.Connections[OleDbConnection]"
+                      connectionManagerID="{B834BF30-910D-4A59-9ABF-66325EE70C67}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[10.6.26.7.MediSannaDevs.sa1 1]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]"
+                      errorOrTruncationOperation="Command Execution"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Command Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[cod_usu]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="12"
+                          cachedName="cod_usu"
+                          cachedSortKeyPosition="1"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Sort.Outputs[Sort Output].Columns[cod_usu]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[nom_usu]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="nom_usu"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Sort.Outputs[Sort Output].Columns[nom_usu]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="Param_0">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Param_1">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Output]"
+                      exclusionGroup="1"
+                      name="OLE DB Command Output"
+                      synchronousInputId="Package\Sequence Container\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Command Error Output"
+                      synchronousInputId="Package\Sequence Container\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task\Sort"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Sort"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task\Sort.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Sort.Inputs[Sort Input].Columns[cod_usu]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="12"
+                          cachedName="cod_usu"
+                          lineageId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[cod_usu]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Sort.Inputs[Sort Input].Columns[nom_usu]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="nom_usu"
+                          lineageId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[nom_usu]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\Sort.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Sort.Outputs[Sort Output].Columns[cod_usu]"
+                          codePage="1252"
+                          dataType="str"
+                          length="12"
+                          lineageId="Package\Sequence Container\Data Flow Task\Sort.Outputs[Sort Output].Columns[cod_usu]"
+                          name="cod_usu"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[cod_usu]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Sort.Outputs[Sort Output].Columns[nom_usu]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Sequence Container\Data Flow Task\Sort.Outputs[Sort Output].Columns[nom_usu]"
+                          name="nom_usu">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[nom_usu]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Sequence Container\Data Flow Task.Paths[ODBC Source Output]"
+                  endId="Package\Sequence Container\Data Flow Task\Sort.Inputs[Sort Input]"
+                  name="ODBC Source Output"
+                  startId="Package\Sequence Container\Data Flow Task\ODBC Source.Outputs[ODBC Source Output]" />
+                <path
+                  refId="Package\Sequence Container\Data Flow Task.Paths[Sort Output]"
+                  endId="Package\Sequence Container\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Data Flow Task\Sort.Outputs[Sort Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Sequence Container\Data Flow Task"
+          TopLeft="88,28" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="315,120"
+          Size="315,163"
+          Id="Package\Sequence Container"
+          TopLeft="169,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Sequence Container\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Sequence Container\Data Flow Task\ODBC Source"
+          TopLeft="556,27" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Sequence Container\Data Flow Task\Sort"
+          TopLeft="583,141" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task.Paths[ODBC Source Output]"
+          TopLeft="629.5,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72"
+              Start="0,0"
+              End="0,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Sequence Container\Data Flow Task\OLE DB Command"
+          TopLeft="543,260" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task.Paths[Sort Output]"
+          TopLeft="629,183">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77"
+              Start="0,0"
+              End="0,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
